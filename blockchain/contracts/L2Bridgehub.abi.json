@@ -1,0 +1,197 @@
+[
+    {
+        "type": "constructor",
+        "inputs": [
+            {
+                "name": "l1Vault_",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "bridgedErc20Implementation_",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "BRIDGEDERC20_BEACON",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "BRIDGED_ERC20_IMPLEMENTATION",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "L1VAULT",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "getL1Erc20SavedMetadata",
+        "inputs": [
+            {
+                "name": "l1Erc20Address_",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "name",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "symbol",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "decimals",
+                "type": "uint8",
+                "internalType": "uint8"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "getL1UserDepositedTokens",
+        "inputs": [
+            {
+                "name": "l1Erc20Address_",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "user_",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "l2CounterpartErc20Addresses",
+        "inputs": [
+            {
+                "name": "l1Erc20Address",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "l2Erc20Address",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "userWithdrawals",
+        "inputs": [
+            {
+                "name": "erc20Address",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "user",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "withdraw",
+        "inputs": [
+            {
+                "name": "l1Erc20Address_",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "amount_",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "error",
+        "name": "WithdrawAmountEceedDeposits",
+        "inputs": [
+            {
+                "name": "totalWithdrawnAmount",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "withdrawnAmount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "error",
+        "name": "ZeroAddress",
+        "inputs": []
+    },
+    {
+        "type": "error",
+        "name": "ZeroValue",
+        "inputs": []
+    }
+]

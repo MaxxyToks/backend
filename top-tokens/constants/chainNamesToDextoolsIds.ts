@@ -1,0 +1,15 @@
+export const chainMapping = {
+    'ethereum': 'ether',
+    'bsc': 'bnb',
+    'arbitrum': 'arbitrum',
+    'base': 'base',
+    'optimism': 'optimism',
+    'zksync': 'zksync',
+    'polygon': 'polygon',
+    'scroll': 'scroll',
+    'solana': 'solana',
+    'gnosis': 'gnosis',
+    'avalanche': 'avalanche',
+    'fantom': 'fantom',
+    'aurora': 'aurora',
+};
