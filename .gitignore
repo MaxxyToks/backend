@@ -1,3 +1,14 @@
 # misc
 .DS_Store
 *.pem
+node_modules
+
+/node_modules
+/dist
+/build
+/logs
+/temp
+/cache
+/backup
+/temp
+/cache
