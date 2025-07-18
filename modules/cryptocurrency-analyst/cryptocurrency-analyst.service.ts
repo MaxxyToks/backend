@@ -1,0 +1,1 @@
+export * from '../../cryptocurrency-analyst/cryptocurrency-analyst.service'; 
