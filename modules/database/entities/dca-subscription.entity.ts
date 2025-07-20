@@ -1,32 +1,111 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, CreateDateColumn, UpdateDateColumn } from 'typeorm';
-import { User } from './user.entity';
+import { ApiProperty } from '@nestjs/swagger';
+import { IsString } from 'class-validator';
+import { Column, Entity } from 'typeorm';
 
-@Entity('dca_subscription')
-export class DcaSubscription {
-  @PrimaryGeneratedColumn()
-  id: number;
+import { ChainNames } from '../../blockchain/constants';
+import { BaseEntity } from '../../database/entities/base.entity';
+import { TokenMetadata } from '../../database/entities/swap-order.entity';
 
-  @ManyToOne(() => User, { nullable: false })
-  user: User;
+@Entity()
+export class DcaSubscription extends BaseEntity {
+    @ApiProperty({
+        example: 'Ethereum',
+        description: 'Chain name',
+    })
+    @IsString()
+    @Column()
+    chainName: ChainNames;
 
-  @Column()
-  tokenIn: string;
+    @ApiProperty({
+        example: 'user123',
+        description: 'User ID',
+    })
+    @IsString()
+    @Column()
+    userId: string;
 
-  @Column()
-  tokenOut: string;
+    @ApiProperty({
+        description: 'Subscription ID',
+    })
+    @IsString()
+    @Column()
+    dcaKey: string;
 
-  @Column('decimal')
-  amount: number;
+    @ApiProperty({
+        example: '0x1234567890123456789012345678901234567890',
+        description: 'User Address',
+    })
+    @IsString()
+    @Column()
+    userAddress: string;
 
-  @Column('int')
-  interval: number; // in seconds
+    @ApiProperty({
+        example: 'Uniswap V3',
+        description: 'Dex Name',
+    })
+    @IsString()
+    @Column()
+    dex: string;
 
-  @Column({ default: true })
-  active: boolean;
+    @Column({ type: 'jsonb', nullable: false })
+    @ApiProperty({
+        description: 'Base token metadata',
+    })
+    tokenIn: TokenMetadata;
 
-  @CreateDateColumn()
-  createdAt: Date;
+    @Column({ type: 'jsonb', nullable: false })
+    @ApiProperty({
+        description: 'Quote token metadata',
+    })
+    tokenOut: TokenMetadata;
 
-  @UpdateDateColumn()
-  updatedAt: Date;
+    @ApiProperty({
+        example: '100',
+        description: 'Amount',
+    })
+    @IsString()
+    @Column()
+    amount: string;
+
+    @Column()
+    @ApiProperty({
+        description: 'Next trigger timestamp of the order',
+    })
+    cycles: string;
+
+    @ApiProperty({
+        example: '10',
+        description: 'Amount Per Cycle',
+    })
+    @IsString()
+    @Column()
+    amountPerCycle: string;
+
+    @ApiProperty({
+        example: '7d',
+        description: 'Cycle Interval',
+    })
+    @IsString()
+    @Column()
+    cycleInterval: string;
+
+    @Column()
+    @ApiProperty({
+        description: 'Last trigger timestamp of the order',
+    })
+    lastTriggerTimestamp: string;
+
+    @ApiProperty({
+        description: 'Cycles left',
+    })
+    @IsString()
+    @Column()
+    cyclesLeft: string;
+
+    @ApiProperty({
+        description: 'Amount left',
+    })
+    @IsString()
+    @Column()
+    amountLeft: string;
 } 

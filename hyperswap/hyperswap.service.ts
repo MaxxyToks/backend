@@ -1,26 +1,26 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { BigNumber, ethers } from 'ethers';
 
-import { ChainNames } from 'modules/blockchain/constants';
-import { EvmUtils } from 'modules/blockchain/evm.utils';
-import { PoolRepository } from 'modules/database/repository/hyperswap-pool.repository';
-import { UserRepository } from 'modules/database/repository/user.repository';
-import { KmsService } from 'modules/kms/kms.service';
+import { ChainNames } from '../modules/blockchain/constants';
+import { EvmUtils } from '../modules/blockchain/evm.utils';
+import { PoolRepository } from '../modules/database/repository/hyperswap-pool.repository';
+import { UserRepository } from '../modules/database/repository/user.repository';
+import { KmsService } from '../modules/kms/kms.service';
 
 import { EventEmitter2, OnEvent } from '@nestjs/event-emitter';
 import { formatUnits } from 'ethers/lib/utils';
-import { SwapOrder } from 'modules/database/entities/swap-order.entity';
+import { SwapOrder } from '../modules/database/entities/swap-order.entity';
 import factoryAbi from './abi/factory.json';
 import pairAbi from './abi/pair.json';
 import routerV3Abi from './abi/position-manager.json';
 import quoterV3Abi from './abi/quoter.json';
 import routerV2Abi from './abi/router.json';
 
-import { ExecuteLimitOrderDto, ExecuteSwapDto } from 'modules/blockchain/dto/params';
-import { DcaSubscription } from 'modules/database/entities/dca-subscription.entity';
-import { FeeService, Ops } from 'modules/fee/fee.service';
-import { CreateOrderDto } from 'modules/swap-orders/dto/order.dto';
-import { TokensService } from 'modules/tokens/tokens.service';
+import { ExecuteLimitOrderDto, ExecuteSwapDto } from '../modules/blockchain/dto/params';
+import { DcaSubscription } from '../modules/database/entities/dca-subscription.entity';
+import { FeeService, Ops } from '../modules/fee/fee.service';
+import { CreateOrderDto } from '../swap-orders/dto/order.dto';
+import { TokensService } from '../modules/tokens/tokens.service';
 import { QuoteSwapDto } from './dto/hyperswap.dto';
 
 @Injectable()

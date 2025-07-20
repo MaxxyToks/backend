@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 
-import { ChainNames } from 'modules/blockchain/constants';
+import { ChainNames } from '../modules/blockchain/constants';
 
 import { BoostedAsset, MinimalBoostedAsset, PoolResponse } from './dto/dexscreener.dto';
 

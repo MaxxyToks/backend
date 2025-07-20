@@ -1,8 +1,8 @@
 import { Injectable, Logger } from '@nestjs/common';
 
-import { AgentService } from 'modules/agent/agent.service';
-import { ChatHistoryRepository } from 'modules/database/repository/chat-history.repository';
-import { UserService } from 'modules/user/user.service';
+import { AgentService } from '../modules/agent/agent.service';
+import { ChatHistoryRepository } from '../modules/database/repository/chat-history.repository';
+import { UserService } from '../modules/user/user.service';
 
 import { ChatHistoryResponseDto } from './dto/chat.dto';
 

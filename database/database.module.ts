@@ -3,8 +3,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
 import { addTransactionalDataSource } from 'typeorm-transactional';
 
-import { AcrossModule } from 'modules/across/across.module';
-import { BlockchainModule } from 'modules/blockchain/blockchain.module';
+import { AcrossModule } from '../modules/across/across.module';
+import { BlockchainModule } from '../modules/blockchain/blockchain.module';
 
 import { HttpModule } from '@nestjs/axios';
 import { ormConfigOptions } from './database.orm.config';

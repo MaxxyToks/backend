@@ -3,7 +3,7 @@
 
 
 import { Injectable } from '@nestjs/common';
-import { PoolRepository } from 'modules/database/repository/hyperswap-pool.repository';
+import { PoolRepository } from '../modules/database/repository/hyperswap-pool.repository';
 
 
 @Injectable()

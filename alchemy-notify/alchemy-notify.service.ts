@@ -3,13 +3,13 @@ import { EventEmitter2 } from '@nestjs/event-emitter';
 
 import { Alchemy, Network, WebhookType } from "alchemy-sdk";
 import { ethers } from 'ethers';
-import { ChainNames, ContractType, getChainIdByName, getContractAbi } from 'modules/blockchain/constants';
-import { ERC20Abi } from 'modules/blockchain/contract-types';
-import { EvmUtils } from 'modules/blockchain/evm.utils';
-import { AccountRepository } from 'modules/database/repository/account.repository';
-import { ObservationRepository } from 'modules/database/repository/observation.repository';
-import { SettingsService } from 'modules/settings/settings.service';
-import { UserService } from 'modules/user/user.service';
+import { ChainNames, ContractType, getChainIdByName, getContractAbi } from '../modules/blockchain/constants';
+import { ERC20Abi } from '../modules/blockchain/contract-types';
+import { EvmUtils } from '../modules/blockchain/evm.utils';
+import { AccountRepository } from '../modules/database/repository/account.repository';
+import { ObservationRepository } from '../modules/database/repository/observation.repository';
+import { SettingsService } from '../modules/settings/settings.service';
+import { UserService } from '../modules/user/user.service';
 
 export type AlchemyWebhookType =
     | "MINED_TRANSACTION"

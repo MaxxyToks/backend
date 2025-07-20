@@ -2,7 +2,7 @@ import { Injectable, Logger } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
 import { LessThan } from 'typeorm';
 
-import { SessionRepository } from 'modules/database/repository/session.entity';
+import { SessionRepository } from '../database/repository/session.entity';
 
 @Injectable()
 export class JobService {

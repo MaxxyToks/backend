@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
 
-import { ChatModule } from "modules/chat/chat.module";
-import { SettingsModule } from "modules/settings/settings.module";
-import { UserModule } from "modules/user/user.module";
+import { ChatModule } from '../modules/chat/chat.module';
+import { SettingsModule } from '../modules/settings/settings.module';
+import { UserModule } from '../modules/user/user.module';
 
 import { BotService } from "./bot.service";
 import { TelegramBotController } from "./telegram-bot.controller";

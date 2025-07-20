@@ -1,8 +1,8 @@
 // events.module.ts
 import { forwardRef, Module } from '@nestjs/common';
 
-import { EvmUtils } from 'modules/blockchain/evm.utils';
-import { UserModule } from 'modules/user/user.module';
+import { EvmUtils } from '../modules/blockchain/evm.utils';
+import { UserModule } from '../modules/user/user.module';
 
 import { AuthModule } from './../auth/auth.module';
 import { WebSocketGatewayService } from './websocket-gateway.service';

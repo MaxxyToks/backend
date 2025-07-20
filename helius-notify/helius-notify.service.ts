@@ -1,11 +1,11 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { EventEmitter2 } from '@nestjs/event-emitter';
-import { Helius, TransactionType } from 'helius-sdk';
-import { ChainNames, getChainIdByName } from 'modules/blockchain/constants';
+// import { Helius, TransactionType } from 'helius-sdk';
+import { ChainNames, getChainIdByName } from '../modules/blockchain/constants';
 
-import { AccountRepository } from 'modules/database/repository/account.repository';
-import { SettingsService } from 'modules/settings/settings.service';
-import { UserService } from 'modules/user/user.service';
+import { AccountRepository } from '../modules/database/repository/account.repository';
+import { SettingsService } from '../modules/settings/settings.service';
+import { UserService } from '../modules/user/user.service';
 
 export interface HeliusWebhookEvent {
     webhookId: string;

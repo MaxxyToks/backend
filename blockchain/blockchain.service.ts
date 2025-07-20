@@ -2,20 +2,20 @@ import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { Keypair } from '@solana/web3.js';
 import { Wallet, ethers, utils } from 'ethers';
 
-import { AccountRepository } from 'modules/database/repository/account.repository';
-import { UserRepository } from 'modules/database/repository/user.repository';
-import { KmsService } from 'modules/kms/kms.service';
-import { TokensService } from 'modules/tokens/tokens.service';
+import { AccountRepository } from '../modules/database/repository/account.repository';
+import { UserRepository } from '../modules/database/repository/user.repository';
+import { KmsService } from '../modules/kms/kms.service';
+import { TokensService } from '../modules/tokens/tokens.service';
 
-import { SwapOrder } from 'modules/database/entities/swap-order.entity';
-import { DcaService } from 'modules/dca/dca.service';
-import { CloseDcaDto, GetDcaDto, SubscribeToDcaDto } from 'modules/dca/dto/dca.dto';
-import { HyperSwapService } from 'modules/hyperswap/hyperswap.service';
-import { JupiterService } from 'modules/jupiter/jupiter.service';
-import { GetLimitOrdersDto, OneinchService } from 'modules/oneinch/oneinch.service';
-import { SonicService } from 'modules/sonic/sonic.service';
-import { CreateOrderDto } from 'modules/swap-orders/dto/order.dto';
-import { SwapOrdersService } from 'modules/swap-orders/swap-orders.service';
+import { SwapOrder } from '../modules/database/entities/swap-order.entity';
+import { DcaService } from '../modules/dca/dca.service';
+import { CloseDcaDto, GetDcaDto, SubscribeToDcaDto } from '../modules/dca/dto/dca.dto';
+import { HyperSwapService } from '../modules/hyperswap/hyperswap.service';
+import { JupiterService } from '../modules/jupiter/jupiter.service';
+import { GetLimitOrdersDto, OneinchService } from '../modules/oneinch/oneinch.service';
+import { SonicService } from '../modules/sonic/sonic.service';
+import { CreateOrderDto } from '../swap-orders/dto/order.dto';
+import { SwapOrdersService } from '../modules/swap-orders/swap-orders.service';
 import { ChainNames, ContractType, getContractAbi, getContractAbiAndBytecode } from './constants';
 import { ERC721Abi } from './contract-types';
 import {

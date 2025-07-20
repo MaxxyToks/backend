@@ -1,1 +1,1 @@
-export * from '../../redis/constants'; 
+export * from '../../../redis/constants'; 

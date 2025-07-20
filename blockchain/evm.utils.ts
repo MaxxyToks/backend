@@ -1,10 +1,10 @@
 import { forwardRef, Inject, Injectable, Logger, OnModuleInit, Optional } from '@nestjs/common';
 import { BaseContract, BigNumber, ethers } from 'ethers';
 
-import { SettingsService } from 'modules/settings/settings.service';
+import { SettingsService } from '../modules/settings/settings.service';
 
-import { FeeService, Ops } from 'modules/fee/fee.service';
-import { TokenMetadataDto } from 'modules/swap-orders/dto/order.dto';
+import { FeeService, Ops } from '../modules/fee/fee.service';
+import { TokenMetadataDto } from '../swap-orders/dto/order.dto';
 import { ChainNames, ChainType, ContractType, getChainNameById, getContractAbi } from './constants';
 import { ERC20Abi } from './contract-types';
 import { ResolveENSParams } from './dto/params';

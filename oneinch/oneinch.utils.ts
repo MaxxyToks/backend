@@ -1,8 +1,8 @@
 
 import { Injectable, Logger } from '@nestjs/common';
 
-import { ChainNames, getChainIdByName } from 'modules/blockchain/constants';
-import { SettingsService } from 'modules/settings/settings.service';
+import { ChainNames, getChainIdByName } from '../modules/blockchain/constants';
+import { SettingsService } from '../modules/settings/settings.service';
 
 export interface FetchTokenAddressParam {
     chainName: string;

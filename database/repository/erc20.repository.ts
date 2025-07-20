@@ -2,7 +2,7 @@ import { Injectable, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ILike, Repository } from 'typeorm';
 
-import { ChainNames } from 'modules/blockchain/constants';
+import { ChainNames } from '../../modules/blockchain/constants';
 
 import { Erc20 } from '../entities/erc20.entity';
 

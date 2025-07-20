@@ -1,7 +1,7 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { IsBoolean, IsString } from 'class-validator';
 
-import { DexToolsRankingPool } from 'modules/dextools/dto/dextools.dto';
+import { DexToolsRankingPool } from '../../dextools/dto/dextools.dto';
 
 export class BasicBlockchainResponseDto {
   @ApiProperty({

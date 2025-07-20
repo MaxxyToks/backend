@@ -1,4 +1,4 @@
-import { ChainNames } from "modules/blockchain/constants";
+import { ChainNames } from '../../modules/blockchain/constants';
 
 export class SubscribeToDcaDto {
   chainName: ChainNames;

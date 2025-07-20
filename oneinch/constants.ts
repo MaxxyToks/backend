@@ -1,4 +1,4 @@
-import { ChainNames } from 'modules/blockchain/constants';
+import { ChainNames } from '../modules/blockchain/constants';
 
 export const LimitOrderProtocolAddresses = {
   [ChainNames.ETHEREUM]: '0x111111125421ca6dc452d289314280a0f8842a65',

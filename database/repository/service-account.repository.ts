@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
-import { SettingsService } from 'modules/settings/settings.service';
+import { SettingsService } from '../../modules/settings/settings.service';
 
 import { BaseRepository } from './base.repository';
 import { ServiceAccount } from '../entities/service-account.entity';

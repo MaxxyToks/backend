@@ -1,4 +1,4 @@
-import { TokenMetadataDto } from "modules/swap-orders/dto/order.dto";
+import { TokenMetadataDto } from '../../swap-orders/dto/order.dto';
 
 export class SwapSolanaParams {
     userId: string;

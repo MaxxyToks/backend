@@ -2,9 +2,9 @@ import { ApiProperty } from '@nestjs/swagger';
 import { IsString } from 'class-validator';
 import { Column, Entity, JoinColumn, ManyToOne, OneToOne } from 'typeorm';
 
-import { AccountSettings } from './account-settings.entity';
-import { BaseEntity } from './base.entity';
-import { User } from './user.entity';
+import { AccountSettings } from '../../database/entities/account-settings.entity';
+import { BaseEntity } from '../../database/entities/base.entity';
+import { User } from '../../database/entities/user.entity';
 
 @Entity()
 export class Account extends BaseEntity {

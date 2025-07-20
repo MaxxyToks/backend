@@ -2,7 +2,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsBoolean, IsString } from 'class-validator';
 
-import { ChainNames } from 'modules/blockchain/constants';
+import { ChainNames } from '../../modules/blockchain/constants';
 
 export enum OrderStatus {
   EXPIRED = 'Order expired',

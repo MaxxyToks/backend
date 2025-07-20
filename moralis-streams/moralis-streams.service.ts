@@ -2,12 +2,12 @@ import { Inject, Injectable, Logger, forwardRef } from '@nestjs/common';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 import Moralis from 'moralis';
 
-import { mainnetChainIdsHex } from 'modules/blockchain/constants';
-import { EvmUtils } from 'modules/blockchain/evm.utils';
-import { AccountRepository } from 'modules/database/repository/account.repository';
-import { IncomingTransferNotificationDto } from 'modules/notifications/dto/notifications.dto';
-import { SettingsService } from 'modules/settings/settings.service';
-import { UserService } from 'modules/user/user.service';
+import { mainnetChainIdsHex } from '../modules/blockchain/constants';
+import { EvmUtils } from '../modules/blockchain/evm.utils';
+import { AccountRepository } from '../modules/database/repository/account.repository';
+import { IncomingTransferNotificationDto } from '../modules/notifications/dto/notifications.dto';
+import { SettingsService } from '../modules/settings/settings.service';
+import { UserService } from '../modules/user/user.service';
 
 @Injectable()
 export class MoralisStreamsService {

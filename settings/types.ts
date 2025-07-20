@@ -1,4 +1,4 @@
-import { ChainNames, ChainType } from 'modules/blockchain/constants';
+import { ChainNames, ChainType } from '../modules/blockchain/constants';
 
 export interface SettingsIface {
   env: {

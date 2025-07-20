@@ -1,8 +1,8 @@
 import { Injectable, NotFoundException, ConflictException } from '@nestjs/common';
-import { UserRepository } from '../database/repository/user.repository';
-import { SessionRepository } from '../database/repository/session.entity';
-import { User } from '../database/entities/user.entity';
-import { Session } from '../database/entities/session.entity';
+import { UserRepository } from '../../database/repository/user.repository';
+import { SessionRepository } from '../../database/repository/session.entity';
+import { User } from '../../database/entities/user.entity';
+import { Session } from '../../database/entities/session.entity';
 
 export interface CreateUserDto {
   telegramId?: string;
@@ -147,7 +147,7 @@ export class UserService {
 
   async deleteUser(userId: string): Promise<void> {
     const user = await this.getUserById(userId);
-    await this.userRepository.remove(user);
+    await this.userRepository.delete(userId);
   }
 
   async getUserProfile(userId: string): Promise<UserProfileDto> {
@@ -184,13 +184,31 @@ export class UserService {
     if (!session) {
       throw new NotFoundException('Session not found');
     }
-    await this.sessionRepository.remove(session);
+    await this.sessionRepository.delete(sessionId);
   }
 
   async deleteAllUserSessions(userId: string): Promise<void> {
     const sessions = await this.sessionRepository.find({
       where: { user: { id: userId } }
     });
-    await this.sessionRepository.remove(sessions);
+    for (const session of sessions) {
+      await this.sessionRepository.delete(session.id);
+    }
   }
-} 
+
+  async getInitUserTelegram(telegramId: string): Promise<User> {
+    return await this.getUserByTelegramId(telegramId);
+  }
+
+  async getUsersByAddress(address: string): Promise<User[]> {
+    return await this.userRepository.find({
+      where: { walletAddress: address.toLowerCase() }
+    });
+  }
+
+  async getUsersBySolanaAddress(address: string): Promise<User[]> {
+    return await this.userRepository.find({
+      where: { walletAddress: address }
+    });
+  }
+}

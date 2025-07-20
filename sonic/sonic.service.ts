@@ -2,17 +2,17 @@ import { Injectable, Logger } from '@nestjs/common';
 import { EventEmitter2, OnEvent } from '@nestjs/event-emitter';
 import { ZERO_ADDRESS } from '@polymarket/order-utils';
 import { ethers, Wallet } from 'ethers';
-import { ChainNames } from 'modules/blockchain/constants';
-import { ExecuteLimitOrderDto, ExecuteSwapDto } from 'modules/blockchain/dto/params';
-import { EvmUtils } from 'modules/blockchain/evm.utils';
-import { DcaSubscription } from 'modules/database/entities/dca-subscription.entity';
-import { SwapOrder } from 'modules/database/entities/swap-order.entity';
-import { UserRepository } from 'modules/database/repository/user.repository';
-import { FeeService, Ops } from 'modules/fee/fee.service';
-import { KmsService } from 'modules/kms/kms.service';
-import { SettingsService } from 'modules/settings/settings.service';
-import { CreateOrderDto } from 'modules/swap-orders/dto/order.dto';
-import { TokensService } from 'modules/tokens/tokens.service';
+import { ChainNames } from '../modules/blockchain/constants';
+import { ExecuteLimitOrderDto, ExecuteSwapDto } from '../modules/blockchain/dto/params';
+import { EvmUtils } from '../modules/blockchain/evm.utils';
+import { DcaSubscription } from '../modules/database/entities/dca-subscription.entity';
+import { SwapOrder } from '../modules/database/entities/swap-order.entity';
+import { UserRepository } from '../modules/database/repository/user.repository';
+import { FeeService, Ops } from '../modules/fee/fee.service';
+import { KmsService } from '../modules/kms/kms.service';
+import { SettingsService } from '../modules/settings/settings.service';
+import { CreateOrderDto } from '../swap-orders/dto/order.dto';
+import { TokensService } from '../modules/tokens/tokens.service';
 import { SonicUtils } from './sonic.utils';
 
 

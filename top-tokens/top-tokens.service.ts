@@ -1,9 +1,9 @@
 import { Injectable, Logger } from '@nestjs/common';
 
-import { SettingsService } from 'modules/settings/settings.service';
+import { SettingsService } from '../modules/settings/settings.service';
 
 import Bottleneck from 'bottleneck';
-import { ChainNames } from 'modules/blockchain/constants';
+import { ChainNames } from '../modules/blockchain/constants';
 
 import { GetTopTokens, TopTokensDto } from './dto/top-tokens.dto';
 

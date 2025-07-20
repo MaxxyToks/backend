@@ -1,1 +1,1 @@
-export * from '../../../jupiter/dto'; 
+export * from '../../../jupiter/dto/jupiter.dto'; 

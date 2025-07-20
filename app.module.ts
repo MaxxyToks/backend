@@ -33,6 +33,7 @@ import { HookRankModule } from './hookrank/hookrank.module';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { NotificationsModule } from './notifications/notifications.module';
+import { AgentModule } from './modules/agent/agent.module';
 
 @Module({
   imports: [
@@ -70,6 +71,7 @@ import { NotificationsModule } from './notifications/notifications.module';
     UserModule,
     AuthModule,
     NotificationsModule,
+    AgentModule,
   ],
   controllers: [],
   providers: [],

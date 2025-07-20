@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import * as fs from 'fs-extra';
-import { AgentService } from 'modules/agent/agent.service';
+import { AgentService } from '../modules/agent/agent.service';
 import { join } from 'path';
 import { v4 as uuid } from 'uuid';
 

@@ -2,7 +2,7 @@ import { ApiProperty } from '@nestjs/swagger';
 import { IsEnum, IsString } from 'class-validator';
 import { Entity, Column, ManyToOne } from 'typeorm';
 
-import { GptRoles } from 'modules/constants';
+import { GptRoles } from '../../modules/constants';
 
 import { BaseEntity } from './base.entity';
 import { User } from './user.entity';

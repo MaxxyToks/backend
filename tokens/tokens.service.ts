@@ -3,14 +3,14 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { ZERO_ADDRESS } from '@polymarket/order-utils';
 import { Repository } from 'typeorm';
 
-import { ChainNames, getChainIdByName, getChainNameById, ZERO_ARB_ADDRESS, ZERO_BNB_ADDRESS, ZERO_HYPER_ADDRESS, ZERO_SOL_ADDRESS } from 'modules/blockchain/constants';
-import { EvmUtils } from 'modules/blockchain/evm.utils';
-import { SolanaUtils } from 'modules/blockchain/solana.utils';
-import { Erc20 } from 'modules/database/entities/erc20.entity';
-import { Erc20Repository } from 'modules/database/repository/erc20.repository';
-import { HyperswapUtils } from 'modules/hyperswap/hyperswap.utils';
-import { OneInchUtils } from 'modules/oneinch/oneinch.utils';
-import { SonicUtils } from 'modules/sonic/sonic.utils';
+import { ChainNames, getChainIdByName, getChainNameById, ZERO_ARB_ADDRESS, ZERO_BNB_ADDRESS, ZERO_HYPER_ADDRESS, ZERO_SOL_ADDRESS } from '../modules/blockchain/constants';
+import { EvmUtils } from '../modules/blockchain/evm.utils';
+import { SolanaUtils } from '../modules/blockchain/solana.utils';
+import { Erc20 } from '../modules/database/entities/erc20.entity';
+import { Erc20Repository } from '../modules/database/repository/erc20.repository';
+import { HyperswapUtils } from '../modules/hyperswap/hyperswap.utils';
+import { OneInchUtils } from '../modules/oneinch/oneinch.utils';
+import { SonicUtils } from '../modules/sonic/sonic.utils';
 
 export interface FetchTokenAddressParam {
   chainName: ChainNames;

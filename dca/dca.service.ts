@@ -4,14 +4,14 @@ import { Injectable, Logger } from '@nestjs/common';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 import { Cron, CronExpression } from '@nestjs/schedule';
 import { ethers } from 'ethers';
-import { ChainNames } from 'modules/blockchain/constants';
-import { EvmUtils } from 'modules/blockchain/evm.utils';
-import { DcaSubscription } from 'modules/database/entities/dca-subscription.entity';
-import { TokenMetadata } from 'modules/database/entities/swap-order.entity';
-import { DcaSubscriptionRepository } from 'modules/database/repository/dca-subscription.repository';
-import { UserRepository } from 'modules/database/repository/user.repository';
-import { CloseDcaDto, GetDcaDto, SubscribeToDcaDto } from 'modules/dca/dto/dca.dto';
-import { TokensService } from 'modules/tokens/tokens.service';
+import { ChainNames } from '../modules/blockchain/constants';
+import { EvmUtils } from '../modules/blockchain/evm.utils';
+import { DcaSubscription } from '../modules/database/entities/dca-subscription.entity';
+import { TokenMetadata } from '../modules/database/entities/swap-order.entity';
+import { DcaSubscriptionRepository } from '../modules/database/repository/dca-subscription.repository';
+import { UserRepository } from '../modules/database/repository/user.repository';
+import { CloseDcaDto, GetDcaDto, SubscribeToDcaDto } from '../modules/dca/dto/dca.dto';
+import { TokensService } from '../modules/tokens/tokens.service';
 import { MoreThan } from 'typeorm';
 
 @Injectable()

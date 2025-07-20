@@ -1,9 +1,9 @@
 import { Injectable, Logger } from '@nestjs/common';
 
 import { sleep } from 'common/utils/sleep';
-import { AcrossService } from 'modules/across/across.service';
-import { ChainId, getChainNameById } from 'modules/blockchain/constants';
-import { EvmUtils } from 'modules/blockchain/evm.utils';
+import { AcrossService } from '../../modules/across/across.service';
+import { ChainId, getChainNameById } from '../../modules/blockchain/constants';
+import { EvmUtils } from '../../modules/blockchain/evm.utils';
 
 import { Erc20 } from '../entities/erc20.entity';
 import { Erc20Repository } from '../repository/erc20.repository';

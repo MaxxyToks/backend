@@ -9,23 +9,21 @@ import {
   getChainIdByName,
   getContractAbi,
   ZERO_ADDRESS,
-} from "modules/blockchain/constants";
-import { SpokePoolAbi } from "modules/blockchain/contract-types";
-import { ERC20Abi } from "modules/blockchain/contract-types/ERC20Abi";
-import { BasicBlockchainResponseDto } from "modules/blockchain/dto/response.dto";
-import { EvmUtils } from "modules/blockchain/evm.utils";
-import { AcrossDepositRepository } from "modules/database/repository/across-deposit.repository";
-import {
-  Erc20Repository,
-  TokenForChainName,
-} from "modules/database/repository/erc20.repository";
-import { UserRepository } from "modules/database/repository/user.repository";
-import { KmsService } from "modules/kms/kms.service";
-import { RedisService } from "modules/redis/redis.service";
-import { SettingsService } from "modules/settings/settings.service";
-import { TokensService } from "modules/tokens/tokens.service";
+} from '../modules/blockchain/constants';
+import { SpokePoolAbi } from '../modules/blockchain/contract-types';
+import { ERC20Abi } from '../blockchain/contract-types/ERC20Abi';
+import { BasicBlockchainResponseDto } from '../modules/blockchain/dto/response.dto';
+import { EvmUtils } from '../modules/blockchain/evm.utils';
+import { AcrossDepositRepository } from '../modules/database/repository/across-deposit.repository';
+import { Erc20Repository } from '../modules/database/repository/erc20.repository';
+import { TokenForChainName } from '../database/repository/erc20.repository';
+import { UserRepository } from '../modules/database/repository/user.repository';
+import { KmsService } from '../modules/kms/kms.service';
+import { RedisService } from '../modules/redis/redis.service';
+import { SettingsService } from '../modules/settings/settings.service';
+import { TokensService } from '../modules/tokens/tokens.service';
 
-import { FeeService, Ops } from "modules/fee/fee.service";
+import { FeeService, Ops } from '../modules/fee/fee.service';
 import { getAcrossChainConfig } from "./constants";
 import {
   ChainNameAndSymbolParam,

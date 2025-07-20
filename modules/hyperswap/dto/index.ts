@@ -1,1 +1,1 @@
-export * from '../../../hyperswap/dto'; 
+export * from '../../../hyperswap/dto/hyperswap.dto'; 

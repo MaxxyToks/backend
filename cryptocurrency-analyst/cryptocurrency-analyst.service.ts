@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 
-import { SettingsService } from 'modules/settings/settings.service';
+import { SettingsService } from '../modules/settings/settings.service';
 
 /**
  *

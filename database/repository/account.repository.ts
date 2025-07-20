@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { In, Repository } from 'typeorm';
 
-import { ChainNames } from 'modules/blockchain/constants';
+import { ChainNames } from '../../modules/blockchain/constants';
 
 import { AccountSettings } from '../entities/account-settings.entity';
 import { Account } from '../entities/account.entity';

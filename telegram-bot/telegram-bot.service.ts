@@ -2,10 +2,10 @@ import {run} from '@grammyjs/runner';
 import {Injectable, Logger, OnModuleInit} from '@nestjs/common';
 import {Bot, webhookCallback} from 'grammy';
 
-import {AgentService} from 'modules/agent/agent.service';
-import {ChatService} from 'modules/chat/chat.service';
-import {SettingsService} from 'modules/settings/settings.service';
-import {UserService} from 'modules/user/user.service';
+import {AgentService} from '../modules/agent/agent.service';
+import {ChatService} from '../modules/chat/chat.service';
+import {SettingsService} from '../modules/settings/settings.service';
+import {UserService} from '../modules/user/user.service';
 
 import axios from 'axios';
 import {BotService} from './bot.service';

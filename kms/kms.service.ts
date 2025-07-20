@@ -1,8 +1,8 @@
 import { DecryptCommand, EncryptCommand, KMSClient } from '@aws-sdk/client-kms';
 import { Injectable, Logger } from '@nestjs/common';
 
-import { AccountRepository } from 'modules/database/repository/account.repository';
-import { SettingsService } from 'modules/settings/settings.service';
+import { AccountRepository } from '../modules/database/repository/account.repository';
+import { SettingsService } from '../modules/settings/settings.service';
 
 @Injectable()
 export class KmsService {

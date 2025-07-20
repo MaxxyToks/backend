@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import * as dotenv from 'dotenv';
 
-import { ChainType } from 'modules/blockchain/constants';
+import { ChainType } from '../modules/blockchain/constants';
 
 import { HttpService } from '@nestjs/axios';
 import { AxiosRequestConfig } from 'axios';

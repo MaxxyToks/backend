@@ -1,9 +1,9 @@
 import { Injectable, UnauthorizedException, BadRequestException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UserService } from '../user/user.service';
-import { SessionRepository } from '../database/repository/session.entity';
-import { User } from '../database/entities/user.entity';
-import { Session } from '../database/entities/session.entity';
+import { SessionRepository } from '../../database/repository/session.entity';
+import { User } from '../../database/entities/user.entity';
+import { Session } from '../../database/entities/session.entity';
 import * as crypto from 'crypto';
 
 export interface LoginDto {
@@ -124,7 +124,7 @@ export class AuthService {
 
       // Check if session is expired
       if (session.expirationDate < new Date()) {
-        await this.sessionRepository.remove(session);
+        await this.sessionRepository.delete(session.id);
         throw new UnauthorizedException('Session expired');
       }
 
@@ -222,5 +222,16 @@ export class AuthService {
     // and verify it when the user signs the message
     
     return message;
+  }
+
+  async userJwtGuard(token: string): Promise<User | null> {
+    try {
+      const payload = await this.jwtService.verifyAsync(token, {
+        secret: process.env.JWT_SECRET || 'your-secret-key',
+      });
+      return await this.userService.getUserById(payload.sub);
+    } catch {
+      return null;
+    }
   }
 } 

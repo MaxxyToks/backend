@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ChatService } from './chat.service';
-import { ChatHistory } from '../database/entities/chat-history.entity';
-import { ChatHistoryRepository } from '../database/repository/chat-history.repository';
-import { DatabaseModule } from '../database/database.module';
+import { ChatHistory } from '../../database/entities/chat-history.entity';
+import { ChatHistoryRepository } from '../../database/repository/chat-history.repository';
+import { DatabaseModule } from '../../database/database.module';
 
 @Module({
   imports: [

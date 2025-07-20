@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Bot } from 'grammy';
 
-import { SettingsService } from 'modules/settings/settings.service';
+import { SettingsService } from '../modules/settings/settings.service';
 
 @Injectable()
 export class BotService {

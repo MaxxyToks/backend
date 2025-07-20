@@ -1,13 +1,14 @@
 import { Module } from "@nestjs/common";
 
-import { AuthModule } from "modules/auth/auth.module";
-import { UserModule } from "modules/user/user.module";
+import { AuthModule } from "../modules/auth/auth.module";
+import { UserModule } from "../modules/user/user.module";
+import { AgentModule } from "../modules/agent/agent.module";
 
 import { ChatController } from "./chat.controller";
 import { ChatService } from "./chat.service";
 
 @Module({
-  imports: [AuthModule, UserModule],
+  imports: [AuthModule, UserModule, AgentModule],
   providers: [ChatService],
   controllers: [ChatController],
   exports: [ChatService],

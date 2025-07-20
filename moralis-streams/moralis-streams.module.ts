@@ -1,8 +1,8 @@
 import { HttpModule } from '@nestjs/axios';
 import { Module, forwardRef } from '@nestjs/common';
 
-import { EvmUtils } from 'modules/blockchain/evm.utils';
-import { UserModule } from 'modules/user/user.module';
+import { EvmUtils } from '../modules/blockchain/evm.utils';
+import { UserModule } from '../modules/user/user.module';
 
 import { MoralisStreamsController } from './moralis-streams.controller';
 import { MoralisStreamsService } from './moralis-streams.service';

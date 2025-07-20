@@ -1,6 +1,6 @@
 import { config } from 'dotenv';
 
-import { ChainNames, ChainType, getChainIdByName, ZERO_ADDRESS } from 'modules/blockchain/constants';
+import { ChainNames, ChainType, getChainIdByName, ZERO_ADDRESS } from '../modules/blockchain/constants';
 config();
 
 interface AcrossConfigInterface {

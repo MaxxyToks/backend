@@ -23,9 +23,9 @@ import {
   Transaction,
   TransactionSignature,
 } from "@solana/web3.js";
-import { FeeService, Ops } from "modules/fee/fee.service";
-import { SettingsService } from "modules/settings/settings.service";
-import { TokenMetadataDto } from "modules/swap-orders/dto/order.dto";
+import { FeeService, Ops } from '../modules/fee/fee.service';
+import { SettingsService } from '../modules/settings/settings.service';
+import { TokenMetadataDto } from '../modules/swap-orders/dto/order.dto';
 import { ChainNames } from "./constants";
 
 @Injectable()

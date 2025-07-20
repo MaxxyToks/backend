@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { ChainNames, getChainIdByName } from 'modules/blockchain/constants';
-import { ExecuteSwapDto } from 'modules/blockchain/dto/params';
+import { ChainNames, getChainIdByName } from '../modules/blockchain/constants';
+import { ExecuteSwapDto } from '../modules/blockchain/dto/params';
 
 
 interface TokenInfo {

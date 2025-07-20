@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
-import { ChainNames, getChainIdByName } from 'modules/blockchain/constants';
+import { ChainNames, getChainIdByName } from '../../modules/blockchain/constants';
 
 import { BaseRepository } from './base.repository';
 import { AcrossDeposit } from '../entities/across-deposit.entity';

@@ -2,7 +2,7 @@ import { ApiProperty } from '@nestjs/swagger';
 import { IsString } from 'class-validator';
 import { Column, Entity } from 'typeorm';
 
-import { ChainNames } from 'modules/blockchain/constants';
+import { ChainNames } from '../../modules/blockchain/constants';
 
 import { BaseEntity } from './base.entity';
 import { TokenMetadata } from './swap-order.entity';

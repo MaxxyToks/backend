@@ -1,5 +1,5 @@
 
-import { TokenMetadataDto } from 'modules/swap-orders/dto/order.dto';
+import { TokenMetadataDto } from '../../swap-orders/dto/order.dto';
 import { ChainNames } from '../constants';
 
 export class GetBalanceERC20Params {

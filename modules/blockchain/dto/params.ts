@@ -12,15 +12,19 @@ export class ExecuteSwapDto {
 
   @ApiProperty()
   @IsString()
-  fromToken: string;
+  tokenSymbolFrom: string;
 
   @ApiProperty()
   @IsString()
-  toToken: string;
+  tokenSymbolTo: string;
 
   @ApiProperty()
   @IsString()
-  amount: string;
+  amountIn: string;
+
+  @ApiProperty()
+  @IsString()
+  amountOutMinimum: string;
 
   @ApiProperty()
   @IsString()
@@ -48,19 +52,19 @@ export class ExecuteLimitOrderDto {
 
   @ApiProperty()
   @IsString()
-  makerToken: string;
+  tokenSymbolFrom: string;
 
   @ApiProperty()
   @IsString()
-  takerToken: string;
+  tokenSymbolTo: string;
 
   @ApiProperty()
   @IsString()
-  makerAmount: string;
+  amount: string;
 
   @ApiProperty()
   @IsString()
-  takerAmount: string;
+  threshold: string;
 
   @ApiProperty()
   @IsString()

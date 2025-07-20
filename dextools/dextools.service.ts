@@ -1,10 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
 import fetch from 'node-fetch';
 
-import { ChainNames, getChainIdByName } from 'modules/blockchain/constants';
-import { EvmUtils } from 'modules/blockchain/evm.utils';
-import { Erc20Repository } from 'modules/database/repository/erc20.repository';
-import { SettingsService } from 'modules/settings/settings.service';
+import { ChainNames, getChainIdByName } from '../modules/blockchain/constants';
+import { EvmUtils } from '../modules/blockchain/evm.utils';
+import { Erc20Repository } from '../modules/database/repository/erc20.repository';
+import { SettingsService } from '../modules/settings/settings.service';
 
 import { chainMapping } from './constants/chainNamesToDextoolsIds';
 import { ApiResponse } from './dto/dextools.dto';

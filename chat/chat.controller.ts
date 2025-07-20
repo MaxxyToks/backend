@@ -2,8 +2,8 @@ import { Body, Controller, Get, Post, Query, UseGuards } from '@nestjs/common';
 import { ApiBearerAuth, ApiResponse } from '@nestjs/swagger';
 
 import { UserSession } from 'common/decorators/user-session.decorator';
-import { JwtGuard } from 'modules/auth/guards/jwt.guard';
-import { User } from 'modules/database/entities/user.entity';
+import { JwtGuard } from '../modules/auth/guards/jwt.guard';
+import { User } from '../modules/database/entities/user.entity';
 
 import { ChatService } from './chat.service';
 import {

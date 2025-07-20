@@ -4,13 +4,13 @@ import { Cron, CronExpression } from '@nestjs/schedule';
 import { InjectRepository } from '@nestjs/typeorm';
 
 import { EventEmitter2, OnEvent } from '@nestjs/event-emitter';
-import { ChainNames } from 'modules/blockchain/constants';
-import { EvmUtils } from 'modules/blockchain/evm.utils';
-import { SwapOrderRepository } from 'modules/database/repository/swap-order.repository';
-import { UserRepository } from 'modules/database/repository/user.repository';
-import { QuoteSwapDto } from 'modules/hyperswap/dto/hyperswap.dto';
-import { HyperSwapService } from 'modules/hyperswap/hyperswap.service';
-import { SonicService } from 'modules/sonic/sonic.service';
+import { ChainNames } from '../modules/blockchain/constants';
+import { EvmUtils } from '../modules/blockchain/evm.utils';
+import { SwapOrderRepository } from '../modules/database/repository/swap-order.repository';
+import { UserRepository } from '../modules/database/repository/user.repository';
+import { QuoteSwapDto } from '../hyperswap/dto/hyperswap.dto';
+import { HyperSwapService } from '../modules/hyperswap/hyperswap.service';
+import { SonicService } from '../modules/sonic/sonic.service';
 import { SwapOrder } from '../database/entities/swap-order.entity';
 import { CreateOrderDto, OrderStatus, OrderStatusDto, PriceChangeDto, TokenMetadataDto } from './dto/order.dto';
 

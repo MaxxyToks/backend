@@ -9,17 +9,17 @@ import {
   VersionedTransaction,
   sendAndConfirmTransaction,
 } from '@solana/web3.js';
-import { ChainNames, ZERO_SOL_ADDRESS } from 'modules/blockchain/constants';
-import { ExecuteLimitOrderDto } from 'modules/blockchain/dto/params';
-import { SwapResponseDto } from 'modules/blockchain/dto/response.dto';
-import { SolanaUtils } from 'modules/blockchain/solana.utils';
-import { AccountRepository } from 'modules/database/repository/account.repository';
-import { UserRepository } from 'modules/database/repository/user.repository';
-import { CloseDcaDto, GetDcaDto, SubscribeToDcaDto } from 'modules/dca/dto/dca.dto';
-import { FeeService, Ops } from 'modules/fee/fee.service';
-import { KmsService } from 'modules/kms/kms.service';
-import { SettingsService } from 'modules/settings/settings.service';
-import { CreateOrderDto } from 'modules/swap-orders/dto/order.dto';
+import { ChainNames, ZERO_SOL_ADDRESS } from '../modules/blockchain/constants';
+import { ExecuteLimitOrderDto } from '../modules/blockchain/dto/params';
+import { SwapResponseDto } from '../modules/blockchain/dto/response.dto';
+import { SolanaUtils } from '../modules/blockchain/solana.utils';
+import { AccountRepository } from '../modules/database/repository/account.repository';
+import { UserRepository } from '../modules/database/repository/user.repository';
+import { CloseDcaDto, GetDcaDto, SubscribeToDcaDto } from '../modules/dca/dto/dca.dto';
+import { FeeService, Ops } from '../modules/fee/fee.service';
+import { KmsService } from '../modules/kms/kms.service';
+import { SettingsService } from '../modules/settings/settings.service';
+import { CreateOrderDto } from '../swap-orders/dto/order.dto';
 import { SwapSolanaParams, SwapSolanaParamsExt } from './dto/jupiter.dto';
 
 @Injectable()

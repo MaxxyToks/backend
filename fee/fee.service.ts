@@ -2,10 +2,10 @@
 import { Inject, Injectable, Logger, forwardRef } from '@nestjs/common';
 import { Keypair } from '@solana/web3.js';
 import { Wallet } from 'ethers';
-import { ChainNames } from 'modules/blockchain/constants';
-import { EvmUtils } from 'modules/blockchain/evm.utils';
-import { SolanaUtils } from 'modules/blockchain/solana.utils';
-import { SettingsService } from 'modules/settings/settings.service';
+import { ChainNames } from '../modules/blockchain/constants';
+import { EvmUtils } from '../modules/blockchain/evm.utils';
+import { SolanaUtils } from '../modules/blockchain/solana.utils';
+import { SettingsService } from '../modules/settings/settings.service';
 
 export enum Ops {
   SWAP,

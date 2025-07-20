@@ -8,12 +8,12 @@ import {
 } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
 
-import { AuthService } from 'modules/auth/auth.service';
-import { getChainNameById } from 'modules/blockchain/constants';
-import { EvmUtils } from 'modules/blockchain/evm.utils';
-import { CloseDcaDto } from 'modules/dca/dto/dca.dto';
-import { CloseOrderNotificationDto, DcaBuyDto } from 'modules/notifications/dto/notifications.dto';
-import { UserService } from 'modules/user/user.service';
+import { AuthService } from '../modules/auth/auth.service';
+import { getChainNameById } from '../modules/blockchain/constants';
+import { EvmUtils } from '../modules/blockchain/evm.utils';
+import { CloseDcaDto } from '../modules/dca/dto/dca.dto';
+import { CloseOrderNotificationDto, DcaBuyDto } from '../modules/notifications/dto/notifications.dto';
+import { UserService } from '../modules/user/user.service';
 
 interface AuthenticateData {
   token: string;
