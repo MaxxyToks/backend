@@ -6,12 +6,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ChatModule } from './chat/chat.module';
 import { DatabaseModule } from './database/database.module';
 import { BlockchainModule } from './blockchain/blockchain.module';
-import { HyperswapModule } from './hyperswap/hyperswap.module';
+import { HyperSwapModule } from './hyperswap/hyperswap.module';
 import { JupiterModule } from './jupiter/jupiter.module';
 import { OneinchModule } from './oneinch/oneinch.module';
 import { SonicModule } from './sonic/sonic.module';
-import { DexscreenerModule } from './dexscreener/dexscreener.module';
-import { DextoolsModule } from './dextools/dextools.module';
+import { DexScreenerModule } from './dexscreener/dexscreener.module';
+import { DexToolsModule } from './dextools/dextools.module';
 import { TopTokensModule } from './top-tokens/top-tokens.module';
 import { TokensModule } from './tokens/tokens.module';
 import { SwapOrdersModule } from './swap-orders/swap-orders.module';
@@ -23,13 +23,16 @@ import { RedisModule } from './redis/redis.module';
 import { ScriptsModule } from './scripts/scripts.module';
 import { SettingsModule } from './settings/settings.module';
 import { TelegramBotModule } from './telegram-bot/telegram-bot.module';
-import { WebsocketGatewayModule } from './websocket-gateway/websocket-gateway.module';
+import { WebSocketGatewayModule } from './websocket-gateway/websocket-gateway.module';
 import { AlchemyNotifyModule } from './alchemy-notify/alchemy-notify.module';
 import { HeliusNotifyModule } from './helius-notify/helius-notify.module';
 import { MoralisStreamsModule } from './moralis-streams/moralis-streams.module';
 import { AcrossModule } from './across/across.module';
 import { CryptocurrencyAnalystModule } from './cryptocurrency-analyst/cryptocurrency-analyst.module';
-import { HookrankModule } from './hookrank/hookrank.module';
+import { HookRankModule } from './hookrank/hookrank.module';
+import { UserModule } from './user/user.module';
+import { AuthModule } from './auth/auth.module';
+import { NotificationsModule } from './notifications/notifications.module';
 
 @Module({
   imports: [
@@ -40,12 +43,12 @@ import { HookrankModule } from './hookrank/hookrank.module';
     DatabaseModule,
     ChatModule,
     BlockchainModule,
-    HyperswapModule,
+    HyperSwapModule,
     JupiterModule,
     OneinchModule,
     SonicModule,
-    DexscreenerModule,
-    DextoolsModule,
+    DexScreenerModule,
+    DexToolsModule,
     TopTokensModule,
     TokensModule,
     SwapOrdersModule,
@@ -57,13 +60,16 @@ import { HookrankModule } from './hookrank/hookrank.module';
     ScriptsModule,
     SettingsModule,
     TelegramBotModule,
-    WebsocketGatewayModule,
+    WebSocketGatewayModule,
     AlchemyNotifyModule,
     HeliusNotifyModule,
     MoralisStreamsModule,
     AcrossModule,
     CryptocurrencyAnalystModule,
-    HookrankModule,
+    HookRankModule,
+    UserModule,
+    AuthModule,
+    NotificationsModule,
   ],
   controllers: [],
   providers: [],
